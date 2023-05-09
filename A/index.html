@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <sty<link rel="stylesheet" href="style.css">
+    <title>Test CSS</title>
+  <style>
+    table, tr, th, td {
+        border: 1px solid black;
+    }
+
+    .redColor {
+        background-color: red;
+    }
+
+    .blueColor {
+        background-color: blue;
+    }
+    .first {
+        background-color: red;
+        width: 97%;
+        padding: 4px;
+        margin: 2px;
+        height: 20px;
+        text-align: center;
+        }
+
+    .second {
+        background-color: red;
+        width: 95%;
+        padding: 23px;
+        margin: 2px;
+        text-align: center;
+    }
+
+    .boxBottom {
+        padding-right: 20px;
+        /* padding-bottom: 40px; */
+    }
+
+    .box1{
+        background-color: red;
+        width: 8%;
+        text-align: start;
+        padding-bottom: 10px;
+    }
+
+    .box2{
+        position: relative;
+        background-color: white;
+        padding-bottom: 20px;
+        height: 50px;
+        margin-left: 5%;
+        width: 8%;
+    }
+
+    .box3{
+        background-color: red;
+        width: 12%!important;
+        text-align: start;
+        margin-left: 97%;
+        padding-bottom: 40px;
+        margin-top: -10%;
+    }
+
+    .box4{
+        background-color: red;
+        width: 8%!important;
+        text-align: start;
+        margin-left: 118%;
+        padding-bottom: 40px;
+        margin-bottom: -6%;
+    }
+    .box5{
+        background-color: red;
+        width: 8%!important;
+        text-align: start;
+        margin-left: 10%;
+        padding-bottom: 40px;
+    }
+
+    #star-five {
+      margin: 50px 0;
+      position: relative;
+      display: block;
+      color: rgb(208, 255, 0);
+      width: 0px;
+      height: 0px;
+      border-right: 100px solid transparent;
+      border-bottom: 70px solid rgb(208, 255, 0);
+      border-left: 100px solid transparent;
+      transform: rotate(35deg);
+    }
+    #star-five:before {
+      border-bottom: 80px solid rgb(208, 255, 0);
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      position: absolute;
+      height: 0;
+      width: 0;
+      top: -45px;
+      left: -65px;
+      display: block;
+      content: '';
+      transform: rotate(-35deg);
+    }
+    #star-five:after {
+      position: absolute;
+      display: block;
+      color: red;
+      top: 3px;
+      left: -105px;
+      width: 0px;
+      height: 0px;
+      border-right: 100px solid transparent;
+      border-bottom: 70px solid rgb(208, 255, 0);
+      border-left: 100px solid transparent;
+      transform: rotate(-70deg);
+      content: '';
+    }
+
+    @media screen and (max-width: 600px) {
+            .left {
+                width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+                }
+
+            .test {
+                flex-direction: row;
+            }
+
+            .main {
+                width: 371%;
+            }
+        }
+  </style>
+</head>
+<body>
+    <h1>
+        Hello
+    </h1>
+
+    <table style="width:100%">
+        <tr>
+            <th class="blueColor" colspan="4">B1</th>
+          
+          </tr>
+          <tr>
+            <th class="blueColor" colspan="2">B2</th>
+            <th class="blueColor" colspan="2">B3</th>
+          </tr>
+          <tr>
+            <td class="blueColor" colspan="3" rowspan="3">
+                <div class="second main">B4</div>
+            </td>
+            <td class="blueColor test left" rowspan="4">
+                <div class="first">B5</div>
+                <div class="first">B6</div>
+                <div class="first">B7</div>
+            </td>
+          </tr>
+          <tr>
+
+          </tr>
+          <tr>
+
+          </tr>
+          <tr>
+            <td class="blueColor">B8</td>
+            <td class="blueColor">B9</td>
+            <td class="blueColor">B10</td>
+          </tr>
+          <tr>
+            <td class="blueColor boxBottom" colspan="3">
+                <div class="box1">B5</div>
+                <div class="box2">B5</div>
+                <div class="box3">B3</div>
+                <div class="box4">B4</div>
+                <div class="box5">B5</div>
+               
+
+            </td>
+            <!-- <td class="blueColor">B9</td> -->
+            <!-- <td class="blueColor">B10</td> -->
+          </tr>
+      </table>
+      <div id="star-five">B5</div>
+</body>
+</html>
